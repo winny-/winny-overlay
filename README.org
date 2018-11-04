@@ -1,0 +1,9 @@
+* =winny= Portage Overlay
+  Just some ebuilds that aren't working elsewhere, or are not
+  available elsewhere. Expect little to no testing.
+
+  Add with:
+
+  #+BEGIN_SRC sh
+  layman -o https://raw.githubusercontent.com/winny-/winny-overlay/master/overlay.xml -f -a winny
+  #+END_SRC
