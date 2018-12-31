@@ -16,6 +16,10 @@ IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}"
 
+src_compile() {
+
+}
+
 src_install() {
     emake DESTDIR="${D}" PREFIX="/usr" install
     dodoc README.org
