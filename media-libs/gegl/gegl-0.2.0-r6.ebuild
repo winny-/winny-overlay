@@ -73,6 +73,7 @@ PATCHES=(
 	"${FILESDIR}"/${P}-underlinking.patch
 	"${FILESDIR}"/${P}-libopenraw-0.1.patch  # bug 639834
 	"${FILESDIR}"/${P}-fix-without-exiv2.patch  # bug 641872
+        "${FILESDIR}"/${P}-ffmpeg-4-0-compat.patch  # bug 673378
 
 )
 
