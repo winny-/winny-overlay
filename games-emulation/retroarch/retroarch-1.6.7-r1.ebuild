@@ -109,7 +109,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}/${P}-build.patch" \
 		"${FILESDIR}/${P}-python.patch" \
-		"${FILESDIR}/${P}-disable_wifi_menu.patch"
+		"${FILESDIR}/${P}-disable_wifi_menu.patch" \
+                "${FILESDIR}/${P}-ffmpeg.patch"
 
 	# If Python support is enabled, use the currently enabled "python" binary.
 	if use python; then
