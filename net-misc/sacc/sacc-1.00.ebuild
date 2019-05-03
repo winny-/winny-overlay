@@ -29,6 +29,7 @@ src_prepare() {
 		-e 's|{|(|g;s|}|)|g' \
 		-e '/^[[:space:]]*@echo/d' \
 		-e 's|^	@|	|g' \
+                -e 's|chmod 555|chmod 755|g' \
 		-i || die
 
 	restore_config config.h
