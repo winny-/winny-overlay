@@ -99,6 +99,8 @@ src_install() {
 
 	cd "${BUILD_DIR}"
 	insinto "/usr/share/doom-data"
+	# Do not conflict with gzdoom brightmaps.pk3
+	mv brightmaps.pk3 brightmaps-zandronum.pk3
 	doins *.pk3
 
 	if use opengl; then
