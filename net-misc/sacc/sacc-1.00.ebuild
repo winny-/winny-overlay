@@ -35,6 +35,7 @@ src_prepare() {
 		-i || die
 
 	restore_config config.h
+        eapply_user
 }
 
 src_compile() {
