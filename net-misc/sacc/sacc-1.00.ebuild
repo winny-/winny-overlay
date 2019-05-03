@@ -6,7 +6,8 @@ inherit savedconfig toolchain-funcs
 
 DESCRIPTION="sacc(omys), simple console gopher client"
 HOMEPAGE="gopher://bitreich.org/1/scm/sacc/log.gph"
-SRC_URI="ftp://ftp@bitreich.org/releases/sacc/sacc-v${PV}.tgz"
+SRC_URI="ftp://ftp@bitreich.org/releases/sacc/${PN}-v${PV}.tgz"
+S="${WORKDIR}/${PN}-v${PV}"
 
 LICENSE="MIT"
 SLOT="0"
