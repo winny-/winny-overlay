@@ -1,0 +1,57 @@
+# ChangeLog for games-fps/quakespasm
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*quakespasm-0.85.9 (07 Jun 2013)
+
+  07 Jun 2013; Piotr Szymaniak <szarpaj@grubelek.pl>
+  +files/0.85.9-makefile.patch, +quakespasm-0.85.9.ebuild,
+  -files/0.85.7-makefile.patch, -quakespasm-0.85.7.ebuild:
+  games-fps/quakespasm: Version bump.
+
+*quakespasm-0.85.7 (18 Apr 2012)
+
+  18 Apr 2012; Piotr Szymaniak <szarpaj@grubelek.pl>
+  +files/0.85.7-makefile.patch, -quakespasm-0.85.4.ebuild,
+  +files/homedir_0.patch, -files/0.85.4-makefile.patch,
+  +quakespasm-0.85.7.ebuild:
+  Version bump, removed cruft. Added homedir patch, fixed basedir patch.
+
+*quakespasm-0.85.4 (09 Apr 2011)
+
+  09 Apr 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
+  +files/0.85.4-makefile.patch, -quakespasm-0.85.1.ebuild,
+  -files/quakespasm-0.85.1-missing_mkdir.patch,
+  -files/quakespasm-0.85.1-userdir.patch, -quakespasm-0.85.3.ebuild,
+  -files/quakespasm-0.85.3-ldflags.patch, +quakespasm-0.85.4.ebuild,
+  metadata.xml:
+  Updated ebuild, version bump, removed cruft, updated metadata.
+
+  02 Oct 2010; Piotr Szymaniak <lazy_bum@o2.pl> quakespasm-0.85.3.ebuild:
+  Updated ebuild.
+
+*quakespasm-0.85.3 (25 Sep 2010)
+
+  25 Sep 2010; Piotr Szymaniak <lazy_bum@o2.pl> +quakespasm-0.85.3.ebuild,
+  +files/quakespasm-0.85.3-ldflags.patch:
+  Version bump.
+
+  07 Mar 2010; Piotr Szymaniak <lazy_bum@o2.pl> quakespasm-0.85.1.ebuild,
+  +metadata.xml:
+  Added missing opengl depend, changed rdeps logic.
+
+  01 Mar 2010; Piotr Szymaniak <lazy_bum@o2.pl> quakespasm-0.85.1.ebuild,
+  +files/quakespasm-0.85.1-missing_mkdir.patch,
+  -files/quakespasm-0.85.1-save-in-userdir.patch,
+  +files/quakespasm-0.85.1-userdir.patch:
+  Updated ebuild, added new patch from Ozkan Sezer. Keyworded.
+
+  28 Feb 2010; Piotr Szymaniak <lazy_bum@o2.pl> quakespasm-0.85.1.ebuild:
+  Fixed strip sed.
+
+*quakespasm-0.85.1 (28 Feb 2010)
+
+  28 Feb 2010; Piotr Szymaniak <lazy_bum@o2.pl> +quakespasm-0.85.1.ebuild,
+  +files/quakespasm-0.85.1-save-in-userdir.patch:
+  New package. Hardmasked for testing, still has some problems with per user
+  settings/savegames/etc.
