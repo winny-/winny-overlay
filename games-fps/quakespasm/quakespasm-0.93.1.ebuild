@@ -56,5 +56,5 @@ src_compile() {
 
 src_install() {
 	dobin "${PN}"
-	dodoc Quakespasm.txt Quakespasm-Music.txt Quakespasms.html LICENSE.txt
+	dodoc ../Quakespasm.txt ../Quakespasm-Music.txt ../Quakespasm.html ../LICENSE.txt
 }
