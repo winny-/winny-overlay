@@ -35,7 +35,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PV}-makefile.patch"
 
 	sed -i -e \
-		"s!parms.basedir = \".\"!parms.basedir = \"${GAMES_DATADIR}/quake1\"!" \
+		"s!parms.basedir = \".\"!parms.basedir = \"/usr/share/games/quake1\"!" \
 		main_sdl.c || die "sed failed"
 
 	eapply_user
@@ -57,6 +57,6 @@ src_compile() {
 src_install() {
 	dobin "${PN}"
 	dodoc ../Quakespasm.txt ../Quakespasm-Music.txt ../Quakespasm.html ../LICENSE.txt
-	insinto "${GAMES_DATADIR}/quake1"
+	insinto "/usr/share/games/quake1"
 	doins quakespasm.pak
 }
