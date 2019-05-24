@@ -57,4 +57,6 @@ src_compile() {
 src_install() {
 	dobin "${PN}"
 	dodoc ../Quakespasm.txt ../Quakespasm-Music.txt ../Quakespasm.html ../LICENSE.txt
+	insinto "${GAMES_DATADIR}/quake1"
+	doins quakespasm.pak
 }
