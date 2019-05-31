@@ -1,0 +1,23 @@
+diff --git a/Makefile b/Makefile
+index 17088c5..c7d429d 100644
+--- a/Makefile
++++ b/Makefile
+@@ -8,7 +8,7 @@
+ PROGRAM=eureka
+ 
+ # prefix choices: /usr  /usr/local  /opt
+-PREFIX ?= /usr/local
++PREFIX=/usr
+ 
+ # CXX=clang++-6.0
+ 
+@@ -140,7 +140,8 @@ stripped: all
+ 
+ INSTALL_DIR=$(DESTDIR)$(PREFIX)/share/eureka
+ 
+-install: stripped
++install:
++	install -d $(DESTDIR)$(PREFIX)/bin/
+ 	install -o root -m 755 $(PROGRAM) $(DESTDIR)$(PREFIX)/bin/
+ 	install -d $(INSTALL_DIR)/games
+ 	install -d $(INSTALL_DIR)/common
