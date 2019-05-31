@@ -19,7 +19,7 @@ DEPEND=">=x11-libs/fltk-1.3.0
 	sys-libs/zlib"
 
 src_prepare() {
-#	eapply "${FILESDIR}"/${P}-gentoo-makefile.patch
+	eapply "${FILESDIR}"/${P}-gentoo-makefile.patch
 
 	eapply_user
 }
