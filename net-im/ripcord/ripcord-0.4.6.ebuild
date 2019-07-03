@@ -26,7 +26,8 @@ x11-libs/libXau
 x11-libs/libXdmcp
 x11-libs/libxcb
 virtual/opengl
-x11-libs/libX11"
+x11-libs/libX11
+sys-fs/fuse"
 BDEPEND=""
 
 src_unpack() {
