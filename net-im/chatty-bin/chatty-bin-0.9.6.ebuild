@@ -16,7 +16,7 @@ DESCRIPTION="A chat software specifically made for Twitch"
 HOMEPAGE="http://chatty.github.io/"
 SRC_URI="https://github.com/chatty/chatty/releases/download/v0.9.6/Chatty_${PV}.zip"
 
-LICENSE="GPLv3"
+LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
@@ -32,7 +32,11 @@ S="${WORKDIR}"
 
 src_unpack() {
     default
-    cp ${FILESDIR}/chatty.sh .
+    cp "${FILESDIR}/chatty.sh" .
+}
+
+src_prepare() {
+    default
     sed -i "s/_OPTDIR_/${PN}-${SLOT}/" chatty.sh
 }
 
