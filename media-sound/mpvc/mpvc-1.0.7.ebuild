@@ -33,7 +33,7 @@ winapi-x86_64-pc-windows-gnu-0.4.0
 
 inherit cargo
 
-DESCRIPTION="An mpc-like cli tool for mpv which connects to existing mpv instances through sockets."
+DESCRIPTION="mpc-like tool which connects to existing mpv instances through sockets."
 HOMEPAGE="https://gitlab.com/mpv-ipc/mpvc"
 SRC_URI="https://gitlab.com/mpv-ipc/mpvc/-/archive/v1.0.7/mpvc-v1.0.7.tar.gz -> ${P}.tar.gz
 $(cargo_crate_uris ${CRATES})"
