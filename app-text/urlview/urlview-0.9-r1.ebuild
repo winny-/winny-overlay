@@ -12,8 +12,8 @@ S="${WORKDIR}/${PN}-${PV}.orig"
 DESCRIPTION="A curses URL parser for text files"
 SLOT="0"
 HOMEPAGE="https://packages.qa.debian.org/u/urlview.html"
-SRC_URI="https://ftp.debian.org/debian/pool/main/u/urlview/${PN}_${PV}.orig.tar.gz
-https://ftp.debian.org/debian/pool/main/u/urlview/${PN}_${PV}-${MY_PATCHLEVEL}.diff.gz"
+SRC_URI="http://ftp.debian.org/debian/pool/main/u/urlview/${PN}_${PV}.orig.tar.gz
+http://ftp.debian.org/debian/pool/main/u/urlview/${PN}_${PV}-${MY_PATCHLEVEL}.diff.gz"
 
 LICENSE="GPL-2+"
 KEYWORDS="~amd64"
