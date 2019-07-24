@@ -36,37 +36,37 @@ BDEPEND=""
 S="${WORKDIR}"
 
 src_unpack() {
-    cp "${DISTDIR}/${A}" "${S}/" || die
-    cd "${S}"
-    chmod +x "${MY_APPIMAGE}" || die
-    "./${MY_APPIMAGE}" --appimage-extract &> /dev/null || die
+	cp "${DISTDIR}/${A}" "${S}/" || die
+	cd "${S}"
+	chmod +x "${MY_APPIMAGE}" || die
+	"./${MY_APPIMAGE}" --appimage-extract &> /dev/null || die
 }
 
 src_prepare() {
-    default
-    sed -i \
-        -e "s,Exec=Ripcord,Exec=ripcord,g" \
-        squashfs-root/Ripcord.desktop || die
+	default
+	sed -i \
+		-e "s,Exec=Ripcord,Exec=ripcord,g" \
+		squashfs-root/Ripcord.desktop || die
 }
 
 src_install() {
-    doicon squashfs-root/Ripcord_Icon.png || die
-    domenu squashfs-root/Ripcord.desktop || die
+	doicon squashfs-root/Ripcord_Icon.png || die
+	domenu squashfs-root/Ripcord.desktop || die
 
-    insinto "/opt/${MY_PN}"
-    doins -r squashfs-root/.
-    fperms +x /opt/${MY_PN}/Ripcord
-    dosym ../../opt/${MY_PN}/Ripcord usr/bin/${MY_PN}
+	insinto "/opt/${MY_PN}"
+	doins -r squashfs-root/.
+	fperms +x /opt/${MY_PN}/Ripcord
+	dosym ../../opt/${MY_PN}/Ripcord usr/bin/${MY_PN}
 }
 
 pkg_postinst() {
-    xdg_desktop_database_update
-    xdg_mimeinfo_database_update
-    xdg_icon_cache_update
+	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
+	xdg_icon_cache_update
 }
 
 pkg_postrm() {
-    xdg_desktop_database_update
-    xdg_mimeinfo_database_update
-    xdg_icon_cache_update
+	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
+	xdg_icon_cache_update
 }

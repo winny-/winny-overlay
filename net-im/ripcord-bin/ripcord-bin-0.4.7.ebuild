@@ -37,9 +37,9 @@ QA_PREBUILT="usr/bin/ripcord"
 S="${WORKDIR}"
 
 src_unpack() {
-    cp "${DISTDIR}/${MY_APPIMAGE}" "${S}/"
+	cp "${DISTDIR}/${MY_APPIMAGE}" "${S}/"
 }
 
 src_install() {
-    newbin "${MY_APPIMAGE}" ripcord
+	newbin "${MY_APPIMAGE}" ripcord
 }
