@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>winston+gentoo@ml1.net</email>
+		<name>Winston Weinert</name>
+	</maintainer>
+	<longdescription>
+		Chatty is a chat software specifically made for Twitch, in the spirit of a classic IRC Client. It runs on Windows and any other OS that supports Java 8 or later.
+	</longdescription>
+</pkgmetadata>

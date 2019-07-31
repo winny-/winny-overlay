@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>winston+gentoo@ml1.net</email>
+		<name>Winston Weinert</name>
+	</maintainer>
+	<longdescription>
+		Eureka is a map editor for the classic DOOM games, and a few related games such as Heretic and Hexen. It supports Linux, Windows and OS X.
+	</longdescription>
+</pkgmetadata>
