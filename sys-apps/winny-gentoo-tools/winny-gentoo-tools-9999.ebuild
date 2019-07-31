@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -17,10 +17,10 @@ RDEPEND=""
 DEPEND="${RDEPEND}"
 
 src_compile() {
-    true
+	true
 }
 
 src_install() {
-    emake DESTDIR="${D}" PREFIX="/usr" install
-    dodoc README.org
+	emake DESTDIR="${D}" PREFIX="/usr" install
+	dodoc README.org
 }

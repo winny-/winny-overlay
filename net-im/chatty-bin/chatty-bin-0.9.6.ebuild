@@ -24,26 +24,26 @@ IUSE=""
 DEPEND=""
 
 RDEPEND=">=virtual/jre-1.8
-        ${CDEPEND}"
+		${CDEPEND}"
 
 BDEPEND=""
 
 S="${WORKDIR}"
 
 src_unpack() {
-    default
-    cp "${FILESDIR}/chatty.sh" .
+	default
+	cp "${FILESDIR}/chatty.sh" .
 }
 
 src_prepare() {
-    default
-    sed -i "s/_OPTDIR_/${PN}-${SLOT}/" chatty.sh
+	default
+	sed -i "s/_OPTDIR_/${PN}-${SLOT}/" chatty.sh
 }
 
 src_install() {
-    insinto /opt/${PN}-${SLOT}/lib/
-    doins Chatty.jar
-    doins -r sounds img
-    dodoc readme.txt
-    newbin chatty.sh chatty
+	insinto /opt/${PN}-${SLOT}/lib/
+	doins Chatty.jar
+	doins -r sounds img
+	dodoc readme.txt
+	newbin chatty.sh chatty
 }

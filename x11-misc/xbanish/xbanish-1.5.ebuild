@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -13,14 +13,14 @@ KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
-    x11-libs/libXfixes
-    x11-libs/libXi"
+	x11-libs/libXfixes
+	x11-libs/libXi"
 DEPEND="${RDEPEND}"
 
 src_install() {
-    emake PREFIX="${D}/usr" \
-        MANDIR="${D}/usr/share/man/man1" \
-        INSTALL_PROGRAM="install" \
-        install
-    dodoc README
+	emake PREFIX="${D}/usr" \
+		  MANDIR="${D}/usr/share/man/man1" \
+		  INSTALL_PROGRAM="install" \
+		  install
+	dodoc README
 }

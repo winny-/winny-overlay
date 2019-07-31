@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -29,11 +29,11 @@ src_prepare() {
 		-e 's|{|(|g;s|}|)|g' \
 		-e '/^[[:space:]]*@echo/d' \
 		-e 's|^	@|	|g' \
-                -e 's|chmod 555|chmod 755|g' \
+		-e 's|chmod 555|chmod 755|g' \
 		-i || die
 
 	restore_config config.h
-        eapply_user
+	eapply_user
 }
 
 src_compile() {
