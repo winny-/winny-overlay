@@ -1,0 +1,31 @@
+diff --git a/config.def.h b/config.def.h
+index 5e3989d..82b6363 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -23,4 +23,4 @@
+ static char *plumber = "xdg-open";
+ 
+ /* temporary directory */
+-static char *tmpdir = "/tmp/sacc";
++static char tmpdir[PATH_MAX] = "/tmp/sacc";
+diff --git a/sacc.c b/sacc.c
+index 1224e20..2814737 100644
+--- a/sacc.c
++++ b/sacc.c
+@@ -863,6 +863,7 @@ setup(void)
+ 	close(fd);
+ 	if ((devnullfd = open("/dev/null", O_WRONLY)) < 0)
+ 		die("open: /dev/null: %s", strerror(errno));
++	sprintf(tmpdir, "/tmp/sacc-%u", getuid());
+ 	if (mkdir(tmpdir, S_IRWXU) < 0 && errno != EEXIST)
+ 		die("mkdir: %s: %s", tmpdir, strerror(errno));
+ 	if(interactive = isatty(1)) {
+diff --git a/ui_ti.c b/ui_ti.c
+index 532c32c..c919681 100644
+--- a/ui_ti.c
++++ b/ui_ti.c
+@@ -1,3 +1,4 @@
++#include <limits.h>
+ #include <stdarg.h>
+ #include <stdio.h>
+ #include <stdlib.h>
