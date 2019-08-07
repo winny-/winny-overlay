@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>winston+gentoo@m1l.net</email>
+		<name>Winston weinert</name>
+	</maintainer>
+	<longdescription>
+		libtcod, a.k.a. “The Doryen Library”, is a free, fast, portable and uncomplicated API for roguelike developpers providing an advanced true color console, input, and lots of other utilities frequently used in roguelikes.
+	</longdescription>
+</pkgmetadata>
