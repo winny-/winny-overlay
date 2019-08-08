@@ -7,3 +7,27 @@
   #+BEGIN_SRC sh
   layman -a winny
   #+END_SRC
+
+** How to use an overlay with "little to no testing"?
+
+   After adding the overlay with ~layman -a winny~ you should mask all
+   ebuilds, and only unmask what you intend on using. I personally use
+   this technique for all unofficial overlays.
+
+*** =/etc/portage/package.mask/overlays=
+
+    #+begin_example
+    */*::winny
+    #+end_example
+
+*** =/etc/portage/package/unmask/overlays=
+
+    #+begin_example
+    net-misc/sacc::winny
+    media-sound/mpvc::winny
+    #+end_example
+
+    Alternative: ~emerge -a category/name~ by default will ask if you
+    would like to unmask all necessary package atoms to install
+    =category/name=. Use ~dispatch-conf~ as usual ;). You may want to edit
+    the resulting unmasks to not specify package atom versions.
