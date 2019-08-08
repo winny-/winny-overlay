@@ -20,7 +20,7 @@
     */*::winny
     #+end_example
 
-*** =/etc/portage/package/unmask.overlays=
+*** =/etc/portage/package.unmask/overlays=
 
     #+begin_example
     net-misc/sacc::winny
