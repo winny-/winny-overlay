@@ -5,5 +5,5 @@
   Add with:
 
   #+BEGIN_SRC sh
-  layman -o https://raw.githubusercontent.com/winny-/winny-overlay/master/overlay.xml -f -a winny
+  layman -a winny
   #+END_SRC
