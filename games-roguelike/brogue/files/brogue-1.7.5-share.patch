@@ -25,7 +25,7 @@ index 8420629..16674ee 100644
  	TCOD_mouse_show_cursor(1);
  
 -	SDL_WM_SetIcon(SDL_LoadBMP("icon.bmp"), NULL);
-+       #define BROGUE_ICON_BMP BROGUE_SHARE "icon.bmp"
++	SDL_WM_SetIcon(SDL_LoadBMP(BROGUE_SHARE "icon.bmp"), NULL);
  }
  
  static void gameLoop()
