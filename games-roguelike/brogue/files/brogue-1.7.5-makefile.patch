@@ -1,0 +1,38 @@
+diff --git a/Makefile b/Makefile
+index a2b7d4a..a0e7664 100755
+--- a/Makefile
++++ b/Makefile
+@@ -1,7 +1,7 @@
+ 
+ SDL_FLAGS = `sdl-config --cflags` `sdl-config --libs`
+ LIBTCODDIR=src/libtcod-1.5.2
+-CFLAGS=-Isrc/brogue -Isrc/platform -Wall -Wno-parentheses ${DEFINES}
++CFLAGS+=-Isrc/brogue -Isrc/platform -Wall -Wno-parentheses ${DEFINES} -DBROGUE_SHARE=\"${BROGUE_SHARE}\"
+ RELEASENAME=brogue-1.7.4
+ LASTTARGET := $(shell ./brogue --target)
+ CC ?= gcc
+@@ -43,12 +43,12 @@ BROGUEFILES=src/brogue/Architect.o \
+ 	src/platform/tcod-platform.o \
+ 	src/platform/term.o
+ 
+-TCOD_DEF = -DBROGUE_TCOD -I$(LIBTCODDIR)/include
++TCOD_DEF = -DBROGUE_TCOD -I/usr/include/libtcod-1.5.1
+ TCOD_DEP = ${LIBTCODDIR}
+-TCOD_LIB = -L. -L${LIBTCODDIR} ${SDL_FLAGS} -ltcod -Wl,-rpath,.
++TCOD_LIB = -l:libtcod.so.1.5.1 `pkg-config sdl --libs`
+ 
+ CURSES_DEF = -DBROGUE_CURSES
+-CURSES_LIB = -lncurses -lm
++CURSES_LIB = `pkg-config ncurses --libs` -lm
+ 
+ 
+ tcod : DEPENDENCIES += ${TCOD_DEP}
+@@ -83,7 +83,7 @@ endif
+ .PHONY : clean both curses tcod tar
+ 
+ bin/brogue : ${DEPENDENCIES} ${BROGUEFILES}
+-	$(CC) -O2 -march=i586 -o bin/brogue ${BROGUEFILES} ${LIBRARIES} -Wl,-rpath,.
++	$(CC) -O2 -o bin/brogue ${BROGUEFILES} ${LIBRARIES}
+ 
+ clean : 
+ 	rm -f src/brogue/*.o src/platform/*.o bin/brogue
