@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>winston+gentoo@m1l.net</email>
+		<name>Winston weinert</name>
+	</maintainer>
+	<longdescription>A 26-level dungeon crawl to the Amulet of Yendor.</longdescription>
+</pkgmetadata>
