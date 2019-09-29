@@ -27,7 +27,7 @@ RDEPEND="dev-qt/qtgui:5
 		>=sys-devel/gcc-5.1.0
 		sys-libs/ncurses
 		sys-libs/binutils-libs
-		virtual/libffi:0/0="
+		virtual/libffi:0/0"
 
 S=${WORKDIR}
 
