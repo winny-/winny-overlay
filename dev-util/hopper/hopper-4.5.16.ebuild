@@ -26,7 +26,8 @@ RDEPEND="dev-qt/qtgui:5
 		dev-lang/python:2.7
 		>=sys-devel/gcc-5.1.0
 		sys-libs/ncurses
-		sys-libs/binutils-libs"
+		sys-libs/binutils-libs
+		virtual/libffi:0="
 
 S=${WORKDIR}
 
