@@ -3,7 +3,7 @@
 
 EAPI=7
 
-DESCRIPTION="The Slimy Lichmummy is an adventure game by Ulf Åström, similar in style to the classic \"Rogue\""
+DESCRIPTION="The Slimy Lichmummy is an adventure game by Ulf Astrom, similar in style to the classic \"Rogue\""
 HOMEPAGE="http://www.happyponyland.net/the-slimy-lichmummy"
 SRC_URI="http://www.happyponyland.net/files/${P}.tar.gz"
 
