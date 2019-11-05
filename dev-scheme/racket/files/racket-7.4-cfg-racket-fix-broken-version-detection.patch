@@ -1,0 +1,35 @@
+diff --git a/cfg-racket b/cfg-racket
+index 61487cc..d1a4795 100755
+--- a/cfg-racket
++++ b/cfg-racket
+@@ -4601,23 +4601,28 @@ if test "$ARFLAGS" = '' ; then
+ fi
+ SUB_CONFIGURE_EXTRAS="${SUB_CONFIGURE_EXTRAS} AR_FLAGS="'"'"${ARFLAGS}"'"'
+ 
++is_gmake=`make -v no-such-target-we-hope 2>&1 | grep "GNU Make"`
++
+ # If using gcc, we want all warnings:
+ if test "$CC" = "gcc" ; then
+   COMPFLAGS="$COMPFLAGS -Wall"
+ 
+   # Use -MMD when we have gcc and gnumake:
+-  is_gmake=`make -v no-such-target-we-hope 2>&1 | grep "GNU Make"`
+   if test "$is_gmake" = "" ; then
+     WX_MMD_FLAG=""
+   else
+     WX_MMD_FLAG="-MMD"
+-    INCLUDEDEP="-include"
+   fi
+ 
+   # Compile mzdyn.o with -fPIC
+   DYN_CFLAGS="-fPIC"
+ fi
+ 
++# Use GNU Make feature if present
++if test "$is_gmake" != ""; then
++    INCLUDEDEP="-include"
++fi
++
+ if test "$REZ" = '' ; then
+  REZ=/Developer/Tools/Rez
+ fi
