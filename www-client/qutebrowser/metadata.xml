@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<!-- maintainer-needed -->
+	<upstream>
+		<remote-id type="github">qutebrowser/qutebrowser</remote-id>
+	</upstream>
+	<use>
+		<flag name="scripts">Installs userscripts from the misc/userscripts
+			directory to /usr/share/qutebrowser/userscripts.</flag>
+	</use>
+</pkgmetadata>
