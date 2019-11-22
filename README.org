@@ -36,27 +36,27 @@
 ** Some ebuilds in this overlay
 
 
-*** [[file:net-im/ripcord-bin/][=net-im/ripcord-bin=]]
+*** [[file:net-im/ripcord-bin/][net-im/ripcord-bin]]
 
     The Ripcord chat client for Discord and Slack.
 
-*** [[file:net-im/chatty-bin/][=net-im/chatty-bin=]]
+*** [[file:net-im/chatty-bin/][net-im/chatty-bin]]
 
     Chat client for Twitch.
 
-*** [[file:media-fonts/go][=media-fonts/go=]]
+*** [[file:media-fonts/go][media-fonts/go]]
 
     One of the best fonts for programming.
 
-*** [[file:net-misc/sacc/][=net-misc/sacc=]]
+*** [[file:net-misc/sacc/][net-misc/sacc]]
 
     Simple gopher client.
 
-*** [[file:x11-misc/xbanish/][=x11-misc/xbanish=]]
+*** [[file:x11-misc/xbanish/][x11-misc/xbanish]]
 
     Banish the mouse when not in use.
 
-*** [[file:dev-scheme/racket/][=dev-scheme/racket=]]
+*** [[file:dev-scheme/racket/][dev-scheme/racket]]
 
     I'm a big fan of Racket, so I always want the latest release.
 
