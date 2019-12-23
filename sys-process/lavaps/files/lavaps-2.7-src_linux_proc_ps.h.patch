@@ -1,0 +1,14 @@
+diff --git a/src/linux/proc/ps.h b/src/linux/proc/ps.h
+index aa065cb..d5111ac 100644
+--- a/src/linux/proc/ps.h
++++ b/src/linux/proc/ps.h
+@@ -5,9 +5,6 @@
+ /* get definition of HZ */
+ #include <asm/param.h>
+ 
+-/* get page info */
+-#include <asm/page.h>
+-
+ char *wchan(unsigned long);
+ char *find_func(unsigned long address);
+ void *xcalloc(void *pointer, int size);

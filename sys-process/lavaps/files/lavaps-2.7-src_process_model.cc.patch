@@ -1,0 +1,13 @@
+diff --git a/src/process_model.cc b/src/process_model.cc
+index 422eec8..9c8bed8 100644
+--- a/src/process_model.cc
++++ b/src/process_model.cc
+@@ -86,7 +86,7 @@ process_model::set_cmd(const char *cmd)
+ void
+ process_model::dump()
+ {
+-	cout << int(this) << " "<< pid_ << " " << uid_ << " " << cmd_.c_str() << " " <<
++	cout << long(this) << " "<< pid_ << " " << uid_ << " " << cmd_.c_str() << " " <<
+ 		endl;
+ }
+ 

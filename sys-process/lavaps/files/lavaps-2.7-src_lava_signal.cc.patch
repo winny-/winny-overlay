@@ -1,0 +1,12 @@
+diff --git a/src/lava_signal.cc b/src/lava_signal.cc
+index d9249d9..d595a87 100644
+--- a/src/lava_signal.cc
++++ b/src/lava_signal.cc
+@@ -31,6 +31,7 @@
+ #include <sys/resource.h>
+ #include <sys/types.h>
+ #include <signal.h>
++#include <cstring>
+ 
+ int
+ lava_signal(int pid, int sig)
