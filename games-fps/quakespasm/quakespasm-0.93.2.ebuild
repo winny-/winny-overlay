@@ -36,7 +36,7 @@ S=${WORKDIR}/${P}/Quake
 
 src_prepare() {
 
-	epatch "${FILESDIR}/${PV}-makefile.patch"
+	epatch "${FILESDIR}/0.93.1-makefile.patch"
 
 	sed -i -e \
 		"s!parms.basedir = \".\"!parms.basedir = \"/usr/share/games/quake1\"!" \
