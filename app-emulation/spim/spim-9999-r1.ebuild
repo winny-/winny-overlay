@@ -20,7 +20,9 @@ RDEPEND="
 		x11-libs/libXaw
 	)
 	qt5? (
-		dev-qt/qtgui:5
+		dev-qt/qtwidgets:5
+		dev-qt/qthelp:5
+		dev-qt/qtprintsupport:5
 		dev-libs/icu
 	)
 "
