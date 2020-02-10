@@ -1,6 +1,5 @@
-# Copyright 2020 Gentoo Foundation
+# Copyright 2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 EAPI=6
 
@@ -15,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="cdinstall debug demo mp3 ogg sdl2 opus flac mikmod"
 
-DEPEND="virtual/opengl
+DEPEND="
 	mp3? ( media-libs/libmad )
 	ogg? ( media-libs/libvorbis )
 	opus? (
@@ -24,8 +23,8 @@ DEPEND="virtual/opengl
 	)
 	flac? ( media-libs/flac )
 	mikmod? ( media-libs/libmikmod )
-	sdl2? ( media-libs/libsdl2 )
-	!sdl2? ( media-libs/libsdl )
+	sdl2? ( media-libs/libsdl2[opengl] )
+	!sdl2? ( media-libs/libsdl[opengl] )
 	"
 RDEPEND="${DEPEND}
 	cdinstall? ( games-fps/quake1-data )
@@ -36,7 +35,7 @@ S=${WORKDIR}/${P}/Quake
 
 src_prepare() {
 
-	epatch "${FILESDIR}/${PV}-makefile.patch"
+	epatch "${FILESDIR}/0.93.1-makefile.patch"
 
 	sed -i -e \
 		"s!parms.basedir = \".\"!parms.basedir = \"/usr/share/games/quake1\"!" \
