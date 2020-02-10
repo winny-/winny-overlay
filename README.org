@@ -37,8 +37,8 @@
 
 *** Why is =app-emulation/spim= masked? Why subversion?
 
-    According to the [[https://devmanual.gentoo.org/ebuild-writing/functions/src_unpack/svn-sources/index.html][ebuild writing]] documentation on subversion
-    sources:
+    According to the [[https://devmanual.gentoo.org/ebuild-writing/functions/src_unpack/svn-sources/index.html][ebuild writing documentation on subversion
+    sources]]:
 
     #+begin_quote
     *Note:* Subversion ebuilds must be either with empty =KEYWORDS= or
@@ -52,9 +52,9 @@
     =~app-emulation/spim-9.1.21_p729 **= to your
     =package.accept_keywords=.
 
-    Subversion is used exclusively because [[https://sourceforge.net/projects/spimsimulator/files/][upstream does not offer
-    source tarballs]], despite offering prebuilt packages for debian
-    x86, debian amd64, Mac OS X, and Windows. So the best the ebuild
+    Subversion is used exclusively because [[https://sourceforge.net/p/spimsimulator/bugs/30/][upstream does not offer
+    source tarballs]], despite [[https://sourceforge.net/projects/spimsimulator/files/][offering prebuilt packages for Debian
+    x86, Debian amd64, Mac OS X, and Windows]]. So the best the ebuild
     maintainer can do is offer a live ebuild for the latest Subversion
     revision, and check out specific Subversion
     revisions. Additionally, upstream does not use Subversion tags, so
