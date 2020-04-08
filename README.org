@@ -97,3 +97,12 @@
     Ebuilds will be removed from tree as I get stuff merged back into
     the original ebuild repositories.
 
+** Tasklist
+
+   - [ ] Install =x11-wm/stumpwm-contrib='s =stumpish= script. Control
+     with useflag?
+   - [ ] Grab alephone and marathon packages from my [[https://bitbucket.org/winny-/srsbuilds/src/default/][old overlay]]. (I
+     really want to play Marathon again.)
+   - [ ] Add missing =metadata.xml= files
+   - [ ] Add streamlined way to test every ebuild installs cleanly. If
+     possible add to CI/CD
