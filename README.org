@@ -92,6 +92,15 @@
 
     I'm a big fan of Racket, so I always want the latest release.
 
+*** [[file:games-fps/quakespasm/][games-fps/quakespasm]]
+
+    A faithful Quake I client best for single player and mods.
+
+*** [[file:games-fps/alephone/][games-fps/alephone]]
+
+    [[file:games-fps/alephone-marathon/][Marathon]], [[file:games-fps/alephone-durandal/][Marathon 2 (Durandal)]], and [[file:games-fps/alephone-infinity/][Marathon Infinity]]. Classic
+    first person shooters.
+
 *** And many more…
 
     Ebuilds will be removed from tree as I get stuff merged back into
@@ -99,10 +108,8 @@
 
 ** Tasklist
 
-   - [ ] Install =x11-wm/stumpwm-contrib='s =stumpish= script. Control
-     with useflag?
-   - [ ] Grab alephone and marathon packages from my [[https://bitbucket.org/winny-/srsbuilds/src/default/][old overlay]]. (I
-     really want to play Marathon again.)
+   - [ ] Install =x11-wm/stumpwm-contrib='s =stumpish= script to
+     =/usr/bin=. Control with useflag?
    - [ ] Add missing =metadata.xml= files
    - [ ] Add streamlined way to test every ebuild installs cleanly. If
      possible add to CI/CD
