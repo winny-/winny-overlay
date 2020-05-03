@@ -1,3 +1,4 @@
+# Copyright 2019-2020 Gentoo Authors
 # Copyright 1999-2018 Mikhail Klementev
 # Distributed under the terms of the GNU General Public License v2
 
@@ -27,7 +28,7 @@ RDEPEND="dev-qt/qtgui:5
 		>=sys-devel/gcc-5.1.0
 		sys-libs/ncurses
 		sys-libs/binutils-libs
-		dev-libs/libffi:0/0"
+		dev-libs/libffi-compat:6"
 
 S=${WORKDIR}
 
@@ -43,7 +44,7 @@ src_install() {
 
 	exeinto /opt/hopper-v4/bin
 	doexe opt/hopper-v4/bin/Hopper
-	dosym /opt/hopper-v4/bin/Hopper /usr/bin/hopper
+	dosym ../../opt/hopper-v4/bin/Hopper /usr/bin/hopper
 }
 
 pkg_postinst() {
