@@ -7,7 +7,7 @@ inherit pax-utils
 
 DESCRIPTION="General purpose, multi-paradigm Lisp-Scheme programming language"
 HOMEPAGE="https://racket-lang.org/"
-SRC_URI="minimal? ( https://download.racket-lang.org/installers/${PV}/${PN}-minimal-${PV}-src-builtpkgs.tgz ) !minimal? ( https://download.racket-lang.org/installers/${PV}/${P}-src-builtpkgs.tgz )"
+SRC_URI="minimal? ( http://www.cs.utah.edu/~mflatt/tmp/${PV}/${PN}-minimal-${PV}-src-builtpkgs.tgz ) !minimal? ( http://www.cs.utah.edu/~mflatt/tmp/${PV}/${P}-src-builtpkgs.tgz )"
 LICENSE="LGPL-3 MIT Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
