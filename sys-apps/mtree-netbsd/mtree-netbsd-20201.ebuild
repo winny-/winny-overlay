@@ -14,7 +14,10 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND=""
-DEPEND="${RDEPEND}"
+DEPEND="
+${RDEPEND}
+!sys-apps/mtree
+"
 BDEPEND="
 sys-devel/bmake
 dev-libs/libnbcompat
