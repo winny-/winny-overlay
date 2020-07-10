@@ -67,11 +67,6 @@
 
 ** Some ebuilds in this overlay
 
-
-*** [[file:net-im/ripcord-bin/][net-im/ripcord-bin]]
-
-    The Ripcord chat client for Discord and Slack.
-
 *** [[file:net-im/chatty-bin/][net-im/chatty-bin]]
 
     Chat client for Twitch.
