@@ -51,13 +51,17 @@ RESTRICT="test"
 src_prepare() {
 	# Remove stale lex/yacc files
 	rm QtSpim/{parser_yacc,scanner_lex}.*
+	# This is clearly wrong:
+	# ./QtSpim/parser_yacc.cpp:#include "parser.tab.h"
+	# So let's fix that.
+	sed -i -e 's/parser\.tab/parser_yacc/g' QtSpim/QtSpim.pro
 
 	# XXX Check if these are necessary
 	# fix bugs 240005 and 243588
-#	eapply "${FILESDIR}/${P}-r1-respect_env.patch"
+	# eapply "${FILESDIR}/${P}-r1-respect_env.patch"
 
-	#fix bug 330389
-#	sed -i -e 's:-12-\*-75-:-14-\*-100-:g' xspim/xspim.c || die
+	# fix bug 330389
+	# sed -i -e 's:-12-\*-75-:-14-\*-100-:g' xspim/xspim.c || die
 
 	default
 }
@@ -66,6 +70,10 @@ src_configure() {
 	if use qt5; then
 		pushd QtSpim
 		eqmake5
+		# Maybe there is a way to tell QtSpim.pro to not generate these
+		# commands, but I don't understand why this was a problem in the
+		# first place.  So just nuke the mad commands.
+		sed -i -e '/MOVE.*parser_yacc/d' Makefile
 		popd
 	fi
 }
