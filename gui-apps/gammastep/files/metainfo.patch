@@ -1,0 +1,11 @@
+--- a/Makefile.am	2020-07-19 20:09:44.929367324 +1000
++++ b/Makefile.am	2020-07-19 20:10:10.274780215 +1000
+@@ -80,7 +80,7 @@
+ 
+ # Appdata file
+ if ENABLE_GUI
+-appdatadir = @datadir@/appdata
++appdatadir = @datadir@/metainfo
+ appdata_DATA = $(APPDATA_IN_FILES:.xml.in=.xml)
+ 
+ # We would preferable use @INTLTOOL_XML_RULE@ here but
