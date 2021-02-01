@@ -1,7 +1,7 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 inherit toolchain-funcs qmake-utils subversion
 
 # Unfortunately upstream does not use subversion branches/tags to mark
@@ -51,6 +51,10 @@ RESTRICT="test"
 src_prepare() {
 	# Remove stale lex/yacc files
 	rm QtSpim/{parser_yacc,scanner_lex}.*
+	# This is clearly wrong:
+	# ./QtSpim/parser_yacc.cpp:#include "parser.tab.h"
+	# So let's fix that.
+	sed -i -e 's/parser\.tab/parser_yacc/g' QtSpim/QtSpim.pro
 
 	# XXX Check if these are necessary
 	# fix bugs 240005 and 243588
@@ -66,6 +70,10 @@ src_configure() {
 	if use qt5; then
 		pushd QtSpim
 		eqmake5
+		# Maybe there is a way to tell QtSpim.pro to not generate these
+		# commands, but I don't understand why this was a problem in the
+		# first place.  So just nuke the mad commands.
+		sed -i -e '/MOVE.*parser_yacc/d' Makefile
 		popd
 	fi
 }
