@@ -1,7 +1,8 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-inherit eutils
+EAPI=7
+inherit desktop
 
 DESCRIPTION="Aleph One - Marathon (M1A1)"
 HOMEPAGE="http://marathon.sourceforge.net/"
