@@ -1,110 +1,112 @@
+#+startup: indent
 
 * =winny= Portage Overlay
-  Just some ebuilds that aren't working elsewhere, or are not
-  available elsewhere. Expect little to no testing.
 
-  Add with:
+[[http://unmaintained.tech/][http://unmaintained.tech/badge.svg]]
 
-  #+BEGIN_SRC sh
-  layman -a winny
-  #+END_SRC
+Just some ebuilds that aren't working elsewhere, or are not
+available elsewhere. Expect little to no testing.
+
+** End of Life!
+
+This project is unmaintained and may disappear at any time.  If you want to use
+ebuilds in this repository, *please copy them to your own overlay*.
 
 ** Fequently Questioned Answers (FQA)
 
 *** How to use an overlay with "little to no testing"?
 
-    After adding the overlay with ~layman -a winny~ you should mask all
-    ebuilds, and only unmask what you intend on using. I personally use
-    this technique for all unofficial overlays.
+After adding the overlay you should mask all ebuilds, and only unmask what you
+intend on using. I personally use this technique for all unofficial overlays.
 
 **** =/etc/portage/package.mask/overlays=
 
-     #+begin_example
-     */*::winny
-     #+end_example
+#+begin_example
+*/*::winny
+#+end_example
 
 **** =/etc/portage/package.unmask/overlays=
 
-     #+begin_example
-     net-misc/sacc::winny
-     media-sound/mpvc::winny
-     #+end_example
+#+begin_example
+net-misc/sacc::winny
+media-sound/mpvc::winny
+#+end_example
 
-     Alternative: ~emerge -a category/name~ by default will ask if you
-     would like to unmask all necessary package atoms to install
-     =category/name=. Use ~dispatch-conf~ as usual ;). You may want to edit
-     the resulting unmasks to not specify package atom versions.
+Alternative: ~emerge -a category/name~ by default will ask if you
+would like to unmask all necessary package atoms to install
+=category/name=. Use ~dispatch-conf~ as usual ;). You may want to edit
+the resulting unmasks to not specify package atom versions.
 
 *** Why is =app-emulation/spim= masked? Why subversion?
 
-    According to the [[https://devmanual.gentoo.org/ebuild-writing/functions/src_unpack/svn-sources/index.html][ebuild writing documentation on subversion
-    sources]]:
+According to the [[https://devmanual.gentoo.org/ebuild-writing/functions/src_unpack/svn-sources/index.html][ebuild writing documentation on subversion
+sources]]:
 
-    #+begin_quote
-    *Note:* Subversion ebuilds must be either with empty =KEYWORDS= or
-    package.masked (but not both). Empty =KEYWORDS= are strongly
-    preferred. This applies to "live" ebuilds (=-9999=) and to ebuilds
-    that extract a static revision but still use Subversion for
-    fetching.
-    #+end_quote
+#+begin_quote
+*Note:* Subversion ebuilds must be either with empty =KEYWORDS= or
+package.masked (but not both). Empty =KEYWORDS= are strongly
+preferred. This applies to "live" ebuilds (=-9999=) and to ebuilds
+that extract a static revision but still use Subversion for
+fetching.
+#+end_quote
 
-    As the above suggests, you will need to add something like
-    =~app-emulation/spim-9.1.21_p729 **= to your
-    =package.accept_keywords=.
+As the above suggests, you will need to add something like
+=~app-emulation/spim-9.1.21_p729 **= to your
+=package.accept_keywords=.
 
-    Subversion is used because [[https://sourceforge.net/p/spimsimulator/bugs/30/][upstream does not offer
-    source tarballs]], though upstream [[https://sourceforge.net/projects/spimsimulator/files/][offers prebuilt packages for Debian
-    x86, Debian amd64, Mac OS X, and Windows]]. This means the ebuild
-    must use Subversion — it's not ideal, but I can work with that.
+Subversion is used because [[https://sourceforge.net/p/spimsimulator/bugs/30/][upstream does not offer
+source tarballs]], though upstream [[https://sourceforge.net/projects/spimsimulator/files/][offers prebuilt packages for Debian
+x86, Debian amd64, Mac OS X, and Windows]]. This means the ebuild
+must use Subversion — it's not ideal, but I can work with that.
 
-    A related point of contention is how upstream uses Subversion:
-    [[http://svnbook.red-bean.com/en/1.7/svn.branchmerge.tags.html][Tags]] — the standard way to mark versions in a Subversion
-    repository — are not utilized; instead one must grep through the
-    [[https://sourceforge.net/p/spimsimulator/code/commit_browser][commit history]] looking for text that looks like a version number,
-    and manually check if that commit (a) corresponds to that release,
-    (b) references a different release, or (c) simply isn't a
-    reference to a release.
+A related point of contention is how upstream uses Subversion:
+[[http://svnbook.red-bean.com/en/1.7/svn.branchmerge.tags.html][Tags]] — the standard way to mark versions in a Subversion
+repository — are not utilized; instead one must grep through the
+[[https://sourceforge.net/p/spimsimulator/code/commit_browser][commit history]] looking for text that looks like a version number,
+and manually check if that commit (a) corresponds to that release,
+(b) references a different release, or (c) simply isn't a
+reference to a release.
 
 ** Some ebuilds in this overlay
 
 *** [[file:net-im/chatty-bin/][net-im/chatty-bin]]
 
-    Chat client for Twitch.
+Chat client for Twitch.
 
 *** [[file:media-fonts/go][media-fonts/go]]
 
-    One of the best fonts for programming.
+One of the best fonts for programming.
 
 *** [[file:net-misc/sacc/][net-misc/sacc]]
 
-    Simple gopher client.
+Simple gopher client.
 
 *** [[file:x11-misc/xbanish/][x11-misc/xbanish]]
 
-    Banish the mouse when not in use.
+Banish the mouse when not in use.
 
 *** [[file:dev-scheme/racket/][dev-scheme/racket]]
 
-    I'm a big fan of Racket, so I always want the latest release.
+I'm a big fan of Racket, so I always want the latest release.
 
 *** [[file:games-fps/quakespasm/][games-fps/quakespasm]]
 
-    A faithful Quake I client best for single player and mods.
+A faithful Quake I client best for single player and mods.
 
 *** [[file:games-fps/alephone/][games-fps/alephone]]
 
-    [[file:games-fps/alephone-marathon/][Marathon]], [[file:games-fps/alephone-durandal/][Marathon 2 (Durandal)]], and [[file:games-fps/alephone-infinity/][Marathon Infinity]]. Classic
-    first person shooters.
+[[file:games-fps/alephone-marathon/][Marathon]], [[file:games-fps/alephone-durandal/][Marathon 2 (Durandal)]], and [[file:games-fps/alephone-infinity/][Marathon Infinity]]. Classic
+first person shooters.
 
 *** And many more…
 
-    Ebuilds will be removed from tree as I get stuff merged back into
-    the original ebuild repositories.
+Ebuilds will be removed from tree as I get stuff merged back into
+the original ebuild repositories.
 
 ** Tasklist
 
-   - [ ] Install =x11-wm/stumpwm-contrib='s =stumpish= script to
-     =/usr/bin=. Control with useflag?
-   - [ ] Add missing =metadata.xml= files
-   - [ ] Add streamlined way to test every ebuild installs cleanly. If
-     possible add to CI/CD
+- [ ] Install =x11-wm/stumpwm-contrib='s =stumpish= script to
+  =/usr/bin=. Control with useflag?
+- [ ] Add missing =metadata.xml= files
+- [ ] Add streamlined way to test every ebuild installs cleanly. If
+  possible add to CI/CD
