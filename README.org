@@ -1,3 +1,5 @@
+[[http://unmaintained.tech/][http://unmaintained.tech/badge.svg]]
+
 #+startup: indent
 
 * =winny= Portage Overlay
