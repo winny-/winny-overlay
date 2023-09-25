@@ -1,1 +1,2 @@
 dev-util/android-studio:custom-jdk - Install and use Android Studio's custom JRE.
+sys-apps/systemd userdb - Install the UserDB service.  Saves ~5-20MiB RSS when disabled.
